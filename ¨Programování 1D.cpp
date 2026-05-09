@@ -72,6 +72,6 @@ int main() {
 
     cout << "\nVybral sis classu " << hrac.classa << "." << endl;
     cout << "Tvoje dobrodruzstvi zacina!" << endl;
-
+    int geargrind udelej celeho bosse nezapomen na to 
   
 }
