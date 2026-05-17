@@ -73,5 +73,66 @@ int main() {
     cout << "\nVybral sis classu " << hrac.classa << "." << endl;
     cout << "Tvoje dobrodruzstvi zacina!" << endl;
     int geargrind udelej celeho bosse nezapomen na to 
-  
+        void vesnice(Hrac & hrac) {
+        int volba;
+
+        do {
+            cout << "\n=== VESNICE ===" << endl;
+            cout << "Mas zlato: " << hrac.zlato << endl;
+            cout << "Zivoty: " << hrac.zivoty << "/" << hrac.maxZivoty << endl;
+            cout << "Mana: " << hrac.mana << "/" << hrac.maxMana << endl;
+
+            cout << "\n1 - Doplneni zivotu za 5 zlata" << endl;
+            cout << "2 - Zvysit max zivoty za 10 zlata" << endl;
+            cout << "3 - Zvysit max manu za 10 zlata" << endl;
+            cout << "4 - Zvysit utok za 15 zlata" << endl;
+            cout << "0 - Odejit z vesnice" << endl;
+            cout << "Volba: ";
+            cin >> volba;
+
+            if (volba == 1) {
+                if (hrac.zlato >= 5) {
+                    hrac.zivoty = hrac.maxZivoty;
+                    hrac.zlato -= 5;
+                    cout << "Doplnil sis zivoty." << endl;
+                }
+                else {
+                    cout << "Nemas dost zlata." << endl;
+                }
+            }
+            else if (volba == 2) {
+                if (hrac.zlato >= 10) {
+                    hrac.maxZivoty += 2;
+                    hrac.zivoty = hrac.maxZivoty;
+                    hrac.zlato -= 10;
+                    cout << "Max zivoty zvyseny." << endl;
+                }
+                else {
+                    cout << "Nemas dost zlata." << endl;
+                }
+            }
+            else if (volba == 3) {
+                if (hrac.zlato >= 10) {
+                    hrac.maxMana += 2;
+                    hrac.mana = hrac.maxMana;
+                    hrac.zlato -= 10;
+                    cout << "Max mana zvysena." << endl;
+                }
+                else {
+                    cout << "Nemas dost zlata." << endl;
+                }
+            }
+            else if (volba == 4) {
+                if (hrac.zlato >= 15) {
+                    hrac.utok++;
+                    hrac.zlato -= 15;
+                    cout << "Utok zvysen." << endl;
+                }
+                else {
+                    cout << "Nemas dost zlata." << endl;
+                }
+            }
+
+        } while (volba != 0);
+    }
 }
